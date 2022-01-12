@@ -111,6 +111,11 @@ A simple CFML mini-SDK for accessing the Firebase REST API
   * Examples for sending messages, subscribing/unsubscribing from topics
 ---
 
+# References / Additional reading
+1. Any questions / issues can be posted on https://dev.lucee.org
+2. [Discussion on Firebase API Authentication Token](https://dev.lucee.org/t/firebase-api-authentication-token/9172) on https://dev.lucee.org/
+3. [firebase-cfml](https://github.com/timmaybrown/firebase-cfml) - CFML REST Wrapper for Firebase
+4. [oauth2](https://github.com/coldfumonkeh/oauth2) - A ColdFusion CFC to manage authentication using the OAuth2 protocol
 ## LICENSE
 
 >**The MIT License (MIT)**
