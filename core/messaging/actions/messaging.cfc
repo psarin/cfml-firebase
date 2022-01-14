@@ -1,4 +1,4 @@
-component{
+component name="messaging"{
 
 	import firebase.messaging.models.*;
 
