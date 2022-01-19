@@ -1,7 +1,5 @@
 component name="messaging"{
 
-	import firebase.messaging.models.*;
-
     public function init(){
 		if (isNull(variables.factory)){
 			variables.factory = arguments.factory?:new firebase.factory(arguments);
@@ -30,7 +28,7 @@ component name="messaging"{
 			arguments.apns = new apns().init(argumentCollection = arguments.apns);
 		}
 
-		var instance = new message().init(argumentCollection = arguments);
+		var instance = new firebase.messaging.models.message().init(argumentCollection = arguments);
 
 		var result = variables.factory.http(argumentCollection = {
 			context: this,
