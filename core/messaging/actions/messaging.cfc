@@ -1,5 +1,7 @@
 component name="messaging"{
 
+	import firebase.messaging.models.*;
+
     public function init(){
 		if (isNull(variables.factory)){
 			variables.factory = arguments.factory?:new firebase.factory(arguments);
