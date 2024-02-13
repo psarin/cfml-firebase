@@ -24,11 +24,11 @@ A simple CFML mini-SDK for accessing the Firebase REST API
 4. Get a list of device registration tokens to which you want to send messages
    * Mobile --> getToken() on device, send to your console or server
    * Desktop --> generate a vapidKey from https://console.firebase.google.com/project/[project-name]/settings/cloudmessaging -> Web Push Certificates -> Generate key pair, and exchange for registration token using getToken() using Javascript (or other) library
-  
+
 5. Create the message you want to send per template on Firebase Messaging
     ```javascript
         messageTemplate = {
-            data: 
+            data:
                 {
                     info: "the data object is a custom key value pair",
                     value: serializeJson(
@@ -38,9 +38,9 @@ A simple CFML mini-SDK for accessing the Firebase REST API
                         })
                 },
 
-            notification: 
-                { 
-                    title: 'New example message at #datetimeformat(Now(), 'HH:nn')#!', 
+            notification:
+                {
+                    title: 'New example message at #datetimeformat(Now(), 'HH:nn')#!',
                     body: 'This message was sent using the cfml-firebase library.'
                 },
 
@@ -65,7 +65,7 @@ A simple CFML mini-SDK for accessing the Firebase REST API
 
 ## Private key
   * Download the private key from https://console.firebase.google.com/project/[project-name]/settings/serviceaccounts/adminsdk (usually called `firebase.json`)
-  
+
     ```json
     {
         "type": "service_account",
@@ -106,7 +106,7 @@ A simple CFML mini-SDK for accessing the Firebase REST API
     * `actions/`
       * Components with methods corresponding to Firebase API (e.g. message send, topic subscribe)
     * `models/`
-      * ORM corresponding to message / topic structure per Firebase reference 
+      * ORM corresponding to message / topic structure per Firebase reference
 * `examples/`
   * Examples for sending messages, subscribing/unsubscribing from topics
 ---
@@ -120,7 +120,7 @@ A simple CFML mini-SDK for accessing the Firebase REST API
 
 >**The MIT License (MIT)**
 >
->Copyright (c) 2022 Pankaj Sarin and contributors
+>Copyright (c) 2024 Pankaj Sarin and contributors
 >
 >Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 >
