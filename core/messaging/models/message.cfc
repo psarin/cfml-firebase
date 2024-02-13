@@ -3,7 +3,7 @@ component persistent="true" output="false" accessors="true"
 	/* properties */
 
     // TODO: Create android.cfc and fcm_options.cfc with correct parameters
-        
+
 	property name="name" type="String" hint="The identifier of the message sent, in the format of projects/*/messages/{message_id}.";
     property name="data" type="Struct" hint="Arbitrary key/value payload. The key should not be a reserved word ('from', 'message_type', or any word starting with 'google' or 'gcm').";
 
@@ -28,7 +28,7 @@ component persistent="true" output="false" accessors="true"
 					newVal = deserializeJson(newVal);
 				}
                 if (!isStruct(newVal) and isDate(newVal)){
-                    variables[key] = new orrms.server.utils.moment(newVal).getDateTime();
+                    variables[key] = new firebase.utils.moment(newVal).getDateTime();
             	} else {
                	 	variables[key] = newVal;
             	}

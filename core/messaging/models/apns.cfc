@@ -2,12 +2,12 @@ component persistent="true" output="false" accessors="true"
 {
 	/* properties */
 
-	property name="headers" type="Struct" hint='HTTP request headers defined in Apple Push Notification Service. 
-                                                Refer to APNs request headers for supported headers, 
-                                                e.g. "apns-priority": "10". An object containing a list of "key": value pairs. 
+	property name="headers" type="Struct" hint='HTTP request headers defined in Apple Push Notification Service.
+                                                Refer to APNs request headers for supported headers,
+                                                e.g. "apns-priority": "10". An object containing a list of "key": value pairs.
                                                 Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.';
-	property name="payload" type="Struct" hint="APNs payload as a JSON object, including both aps dictionary and custom payload. 
-                                                See Payload Key Reference. 
+	property name="payload" type="Struct" hint="APNs payload as a JSON object, including both aps dictionary and custom payload.
+                                                See Payload Key Reference.
                                                 If present, it overrides google.firebase.fcm.v1.Notification.title and google.firebase.fcm.v1.Notification.body.";
 //	property name="fcm_options" fieldtype="one-to-one" cfc="fcm_options" hint="Options for features provided by the FCM SDK for iOS.";
 
@@ -23,7 +23,7 @@ component persistent="true" output="false" accessors="true"
 					newVal = deserializeJson(newVal);
 				}
                 if (!isStruct(newVal) and isDate(newVal)){
-                    variables[key] = new orrms.server.utils.moment(newVal).getDateTime();
+                    variables[key] = new firebase.utils.moment(newVal).getDateTime();
             	} else {
                	 	variables[key] = newVal;
             	}

@@ -18,7 +18,7 @@ component persistent="true" output="false" accessors="true"
 					newVal = deserializeJson(newVal);
 				}
                 if (!isStruct(newVal) and isDate(newVal)){
-                    variables[key] = new orrms.server.utils.moment(newVal).getDateTime();
+                    variables[key] = new firebase.utils.moment(newVal).getDateTime();
             	} else {
                	 	variables[key] = newVal;
             	}
